@@ -74,7 +74,7 @@ def intento():
         print(i)
     pyautogui.press('enter',interval=0.25)
 
-#intento()
+intento()
 while True:
     time.sleep(10000)
     time.sleep(3)
