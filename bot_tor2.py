@@ -77,13 +77,14 @@ def intento():
 intento()
 while True:
     time.sleep(3)
-    search = Search("tor/entiendo.png")
+    search = Search("tor/entiendo2.png")
     pos = search.imagesearch()
     if pos[0] != -1:
         pyautogui.moveTo(pos[0], pos[1])
         time.sleep(1)
         pyautogui.click()
         time.sleep(1)
+        '''
         search = Search("tor/play.png")
         pos = search.imagesearch()
         if pos[0] != -1:
@@ -92,10 +93,22 @@ while True:
             pyautogui.click()
             time.sleep(1)
             time.sleep(10000)
+        '''
+        search = Search("tor/play_2.png")
+        pos = search.imagesearch()
+        if pos[0] != -1:
+            pyautogui.moveTo(pos[0], pos[1])
+            time.sleep(1)
+            pyautogui.click()
+            time.sleep(1)
+            time.sleep(10000)
 
+    search = Search("tor/error_captcha.png")
+    pos = search.imagesearch()
+    if pos[0] != -1:
+        intento()
 
-
-    search = Search("tor/problema.png")
+    search = Search("tor/error_5.png")
     pos = search.imagesearch()
     if pos[0] != -1:
          intento()
