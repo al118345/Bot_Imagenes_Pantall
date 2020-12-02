@@ -70,13 +70,30 @@ def intento():
                 print('entre')
                 pyautogui.hotkey('shift', '=')
             else:
-                pyautogui.write(i, interval=0.25)
+                pyautogui.write(i, interval=0.05)
         print(i)
     pyautogui.press('enter',interval=0.25)
 
 intento()
 while True:
     time.sleep(3)
+    search = Search("tor/entiendo.png")
+    pos = search.imagesearch()
+    if pos[0] != -1:
+        pyautogui.moveTo(pos[0], pos[1])
+        time.sleep(1)
+        pyautogui.click()
+        time.sleep(1)
+        search = Search("tor/play.png")
+        pos = search.imagesearch()
+        if pos[0] != -1:
+            pyautogui.moveTo(pos[0], pos[1])
+            time.sleep(1)
+            pyautogui.click()
+            time.sleep(1)
+
+
+
     search = Search("tor/problema.png")
     pos = search.imagesearch()
     if pos[0] != -1:
@@ -95,7 +112,7 @@ while True:
                 pyautogui.moveTo(pos[0], pos[1])
                 time.sleep(1)
                 pyautogui.click()
-                pyautogui.press('enter', interval=0.25)
+                pyautogui.press('enter', interval=0.1)
                 time.sleep(5)
                 print('esta')
             else:
