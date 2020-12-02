@@ -103,6 +103,7 @@ while True:
             time.sleep(1)
             time.sleep(10000)
 
+
     search = Search("tor/error_captcha.png")
     pos = search.imagesearch()
     if pos[0] != -1:
