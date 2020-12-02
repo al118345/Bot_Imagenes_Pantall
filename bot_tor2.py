@@ -91,6 +91,7 @@ while True:
             time.sleep(1)
             pyautogui.click()
             time.sleep(1)
+            time.sleep(10000)
 
 
 
@@ -105,8 +106,7 @@ while True:
             intento()
         else:
             time.sleep(5)
-            search = Search("tor/no_gracias_"
-                            "2.png")
+            search = Search("tor/no_gracias_2.png")
             pos = search.imagesearch()
             if pos[0] != -1:
                 pyautogui.moveTo(pos[0], pos[1])
@@ -126,6 +126,6 @@ while True:
                 pyautogui.click()
                 pyautogui.press('enter', interval=0.25)
                 time.sleep(5)
+                time.sleep(10000)
             else:
                 print("image not found")
-    time.sleep(10000)
