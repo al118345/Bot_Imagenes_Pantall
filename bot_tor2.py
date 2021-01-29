@@ -61,7 +61,7 @@ def intento():
 
 
 
-    for i in list('https://www.youtube.com/watch?v=KN2PmVz0xmw&list=UUJXa8TUeY_1nSqsIFyrnU-g'):
+    for i in list('https://www.youtube.com/watch?v=VsA5vxfda8I'):
         if i in '/':
             print('entre')
             pyautogui.hotkey('shift', '/')
@@ -73,6 +73,7 @@ def intento():
                 pyautogui.write(i, interval=0.05)
         print(i)
     pyautogui.press('enter',interval=0.25)
+
 
 intento()
 while True:
@@ -101,7 +102,9 @@ while True:
             time.sleep(1)
             pyautogui.click()
             time.sleep(1)
-            time.sleep(10000)
+            print('duermo')
+            time.sleep(1000)
+            intento()
 
 
     search = Search("tor/error_captcha.png")
@@ -140,6 +143,13 @@ while True:
                 pyautogui.click()
                 pyautogui.press('enter', interval=0.25)
                 time.sleep(5)
-                time.sleep(10000)
+                print('duermo')
+                time.sleep(1000)
+                intento()
             else:
+                time.sleep(1)
+                pyautogui.press('space', interval=0.01)
+                print('duermo')
+                time.sleep(1000)
+                intento()
                 print("image not found")
