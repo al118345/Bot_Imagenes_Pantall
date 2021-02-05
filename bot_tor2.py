@@ -64,7 +64,11 @@ def intento():
            'https://www.youtube.com/watch?v=QKFBKafxeco',
            'https://www.youtube.com/watch?v=VsA5vxfda8I&t',
            'https://www.youtube.com/watch?v=uwiHVmB3qw8',
-           'https://www.youtube.com/watch?v=Urx62V0OFAk&t=9s'
+           'https://www.youtube.com/watch?v=Urx62V0OFAk&t=9s',
+           'https://www.youtube.com/watch?v=ME2FxGIzG7E',
+           'https://www.youtube.com/watch?v=Jc3H-Gr-_uk',
+           'https://www.youtube.com/watch?v=U7HeCvS3U8I',
+           'https://www.youtube.com/watch?v=J8PDfVY2FfI'
            ]
 
 
