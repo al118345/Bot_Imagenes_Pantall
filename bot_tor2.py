@@ -59,9 +59,20 @@ def intento():
     else:
         print("image not found")
 
+    lista=['https://www.youtube.com/watch?v=V00UF8PQcMA&t',
+           'https://www.youtube.com/watch?v=vCFioQizM4w&t',
+           'https://www.youtube.com/watch?v=QKFBKafxeco',
+           'https://www.youtube.com/watch?v=VsA5vxfda8I&t',
+           'https://www.youtube.com/watch?v=uwiHVmB3qw8',
+           'https://www.youtube.com/watch?v=Urx62V0OFAk&t=9s'
+           ]
 
 
-    for i in list('https://www.youtube.com/watch?v=VsA5vxfda8I'):
+    import random
+    print(len(lista))
+    lista[0]
+
+    for i in list(lista[random.randint(0,len(lista)-1)]):
         if i in '/':
             print('entre')
             pyautogui.hotkey('shift', '/')
@@ -77,6 +88,8 @@ def intento():
 
 intento()
 while True:
+    import random
+    segundos = random.randint(425,590)
     time.sleep(3)
     search = Search("tor/entiendo2.png")
     pos = search.imagesearch()
@@ -103,7 +116,7 @@ while True:
             pyautogui.click()
             time.sleep(1)
             print('duermo')
-            time.sleep(1000)
+            time.sleep(segundos)
             intento()
 
 
@@ -144,12 +157,12 @@ while True:
                 pyautogui.press('enter', interval=0.25)
                 time.sleep(5)
                 print('duermo')
-                time.sleep(1000)
+                time.sleep(segundos)
                 intento()
             else:
                 time.sleep(1)
                 pyautogui.press('space', interval=0.01)
                 print('duermo')
-                time.sleep(1000)
+                time.sleep(segundos)
                 intento()
                 print("image not found")
