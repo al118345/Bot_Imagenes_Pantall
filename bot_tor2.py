@@ -59,17 +59,25 @@ def intento():
     else:
         print("image not found")
 
-    lista=['https://www.youtube.com/watch?v=V00UF8PQcMA&t',
-           'https://www.youtube.com/watch?v=vCFioQizM4w&t',
-           'https://www.youtube.com/watch?v=QKFBKafxeco',
-           'https://www.youtube.com/watch?v=VsA5vxfda8I&t',
-           'https://www.youtube.com/watch?v=uwiHVmB3qw8',
-           'https://www.youtube.com/watch?v=Urx62V0OFAk&t=9s',
-           'https://www.youtube.com/watch?v=ME2FxGIzG7E',
-           'https://www.youtube.com/watch?v=Jc3H-Gr-_uk',
-           'https://www.youtube.com/watch?v=U7HeCvS3U8I',
-           'https://www.youtube.com/watch?v=J8PDfVY2FfI'
-           ]
+    lista = ['https://www.youtube.com/watch?v=JOFR6ChA2Ho&t',
+             'https://www.youtube.com/watch?v=V00UF8PQcMA&t',
+             'https://www.youtube.com/watch?v=vCFioQizM4w&t',
+             'https://www.youtube.com/watch?v=QKFBKafxeco&t',
+             'https://www.youtube.com/watch?v=VsA5vxfda8I&t',
+             'https://www.youtube.com/watch?v=uwiHVmB3qw8&t',
+             'https://www.youtube.com/watch?v=KN2PmVz0xmw&t',
+             'https://www.youtube.com/watch?v=Urx62V0OFAk&t',
+             'https://www.youtube.com/watch?v=f4Erw0p0G8U',
+             'https://www.youtube.com/watch?v=G45ehCje3HU',
+             'https://www.youtube.com/watch?v=2wQpZbbI6Vk',
+             'https://www.youtube.com/watch?v=DMKTzmOBTmE',
+             'https://www.youtube.com/watch?v=tbEzovevM44',
+             'https://www.youtube.com/watch?v=U7HeCvS3U8I',
+             'https://www.youtube.com/watch?v=GxnWNRi3K9g&t=1s',
+             'https://www.youtube.com/watch?v=J8PDfVY2FfI&t',
+             'https://www.youtube.com/watch?v=SJ2KtPdaGWY&t',
+             'https://www.youtube.com/watch?v=CUsklt966rA'
+             ]
 
 
     import random
