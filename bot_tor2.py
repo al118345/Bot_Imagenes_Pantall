@@ -1,6 +1,100 @@
 from screen_search import *
 
+from screen_search import *
 
+def salt_final():
+    crop_rectangle = (1000, 800, 1635, 1000)
+    cropped_im = ImageGrab.grab(crop_rectangle)
+
+    # cropped_im.show()
+    # default imports
+    try:
+        from PIL import Image
+    except ImportError:
+        import Image
+
+    import pytesseract
+
+    ocr_result = pytesseract.image_to_string(cropped_im, lang='spa')
+    return '1938' in ocr_result
+
+def bloqueo():
+    search = Search("tor/error_5.png")
+    pos = search.imagesearch()
+    if pos[0] != -1:
+        return False
+    if '¿Por qué ha sucedido esto?' in texto():
+        print('texto encontrado')
+        return False
+    if 'No se puede acceder a este sitio web' in texto2():
+        print('texto encontrado')
+        return False
+    print(texto3())
+    if 'ESTO ES UNA' in texto3():
+        print('texto encontrado')
+        return False
+    return True
+
+def bloqueo1():
+    search = Search("tor/error_captcha.png")
+    pos = search.imagesearch()
+    if pos[0] != -1:
+        return False
+    return True
+
+from PIL import ImageGrab
+
+def texto():
+    crop_rectangle = (1000, 150, 1635, 275)
+    cropped_im = ImageGrab.grab(crop_rectangle)
+
+    #cropped_im.show()
+    # default imports
+    try:
+        from PIL import Image
+    except ImportError:
+        import Image
+
+    import pytesseract
+
+
+    ocr_result = pytesseract.image_to_string(cropped_im, lang='spa')
+    return ocr_result
+
+
+def texto2():
+    crop_rectangle = (1000, 150, 1635, 500)
+    cropped_im = ImageGrab.grab(crop_rectangle)
+
+    #cropped_im.show()
+    # default imports
+    try:
+        from PIL import Image
+    except ImportError:
+        import Image
+
+    import pytesseract
+
+
+    ocr_result = pytesseract.image_to_string(cropped_im, lang='spa')
+    return ocr_result
+
+def texto3():
+    crop_rectangle = (1000, 150, 1635, 700)
+    cropped_im = ImageGrab.grab(crop_rectangle)
+
+    #cropped_im.show()
+    # default imports
+    try:
+        from PIL import Image
+    except ImportError:
+        import Image
+
+    import pytesseract
+
+
+    ocr_result = pytesseract.image_to_string(cropped_im, lang='spa')
+    return ocr_result
 def intento():
     search = Search("tor/cerrar_brave.png")
     pos = search.imagesearch()
@@ -59,7 +153,11 @@ def intento():
     else:
         print("image not found")
 
-    lista = ['https://www.youtube.com/watch?v=JOFR6ChA2Ho&t',
+    lista = [
+        'https://www.youtube.com/watch?v=4t23hglhHO8&t',
+
+        'https://www.youtube.com/watch?v=BFRGyju1uLo',
+        'https://www.youtube.com/watch?v=JOFR6ChA2Ho&t',
              'https://www.youtube.com/watch?v=V00UF8PQcMA&t',
              'https://www.youtube.com/watch?v=vCFioQizM4w&t',
              'https://www.youtube.com/watch?v=QKFBKafxeco&t',
@@ -93,9 +191,49 @@ def intento():
                 print('entre')
                 pyautogui.hotkey('shift', '=')
             else:
-                pyautogui.write(i, interval=0.05)
+                pyautogui.write(i, interval=0.01)
         print(i)
-    pyautogui.press('enter',interval=0.25)
+    pyautogui.press('enter',interval=0.01)
+
+def no_gracias():
+    search = Search("tor/no_gracias_2.png")
+    pos = search.imagesearch()
+    if pos[0] != -1:
+                pyautogui.moveTo(pos[0], pos[1])
+                time.sleep(1)
+                pyautogui.click()
+                pyautogui.press('enter', interval=0.1)
+                time.sleep(5)
+                print('esta')
+    else:
+                print("image not found")
+
+    search = Search("tor/acepto.png")
+    pos = search.imagesearch()
+    if pos[0] != -1:
+                print('acepto')
+                pyautogui.moveTo(pos[0], pos[1])
+                time.sleep(1)
+                pyautogui.click()
+                pyautogui.press('space', interval=0.01)
+
+'''
+crop_rectangle = (1000, 800, 1635, 1000)
+cropped_im = ImageGrab.grab(crop_rectangle)
+
+#cropped_im.show()
+# default imports
+try:
+    from PIL import Image
+except ImportError:
+    import Image
+
+import pytesseract
+
+ocr_result = pytesseract.image_to_string(cropped_im, lang='spa')
+print( ocr_result)
+
+'''
 
 
 intento()
@@ -106,6 +244,7 @@ while True:
     search = Search("tor/entiendo2.png")
     pos = search.imagesearch()
     if pos[0] != -1:
+
         pyautogui.moveTo(pos[0], pos[1])
         time.sleep(1)
         pyautogui.click()
@@ -122,10 +261,11 @@ while True:
         '''
         search = Search("tor/play_2.png")
         pos = search.imagesearch()
-        if pos[0] != -1:
+        if pos[0] != -1 and pos[0] != 1352:
+            print('zona1')
             pyautogui.moveTo(pos[0], pos[1])
             time.sleep(1)
-            pyautogui.click()
+            pyautogui.press('space', interval=0.01)
             time.sleep(1)
             print('duermo')
             time.sleep(segundos)
@@ -163,18 +303,63 @@ while True:
             search = Search("tor/acepto.png")
             pos = search.imagesearch()
             if pos[0] != -1:
+                print('acepto')
                 pyautogui.moveTo(pos[0], pos[1])
                 time.sleep(1)
                 pyautogui.click()
-                pyautogui.press('enter', interval=0.25)
+                pyautogui.press('space', interval=0.01)
                 time.sleep(5)
                 print('duermo')
                 time.sleep(segundos)
                 intento()
             else:
-                time.sleep(1)
+                print('nadie')
+                time.sleep(5)
+                no_gracias()
+                if not bloqueo():
+                    intento()
+                    continue
+                if not bloqueo1():
+                    intento()
+                    continue
                 pyautogui.press('space', interval=0.01)
                 print('duermo')
-                time.sleep(segundos)
+                time.sleep(20)
+                no_gracias()
+                if not bloqueo():
+                    intento()
+                    continue
+                if not bloqueo1():
+                    intento()
+                    continue
+                search = Search("tor/play_2.png")
+                pos = search.imagesearch()
+                print(pos[0])
+                if pos[0] != -1 and pos[0] ==1045:
+                    print('entre en play')
+                    pyautogui.moveTo(pos[0], pos[1])
+                    time.sleep(1)
+                    pyautogui.press('space', interval=0.01)
+                time.sleep(20)
+                no_gracias()
+                if not bloqueo():
+                    intento()
+                    continue
+                if not bloqueo1():
+                    intento()
+                    continue
+                search = Search("tor/play_2.png")
+                pos = search.imagesearch()
+                print(pos[0])
+                if pos[0] != -1 and pos[0] ==1045:
+                    print('entre en play2')
+                    pyautogui.moveTo(pos[0], pos[1])
+                    time.sleep(1)
+                    pyautogui.press('space', interval=0.01)
+                if not salt_final():
+                    print('Nada cargado')
+                    intento()
+                    continue
+                time.sleep(segundos-20)
                 intento()
                 print("image not found")
